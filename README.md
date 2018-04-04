@@ -1,4 +1,4 @@
-# Unit_Testing
+# Unit Testing
 Assignment for the course "Trusted and Secure Software Development"
 
 This project is using a txt file that includes the grades per student.
