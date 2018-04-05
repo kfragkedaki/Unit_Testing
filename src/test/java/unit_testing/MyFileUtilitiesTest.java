@@ -8,7 +8,7 @@ import org.junit.Rule;
 
 public class MyFileUtilitiesTest {
 	
-	int[] array = new int[150];
+	int[] array = new int[10];
 	MyFileUtilities mf = new MyFileUtilities();
 	
 	@Before 

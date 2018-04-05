@@ -1,5 +1,6 @@
 package unit_testing;
 
+import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,7 +10,7 @@ public class MyFileUtilities {
 	
 	public int[] readFile(String filepath) {
 		
-		int[] array = new int[150];
+		ArrayList<Integer> arraylist = new ArrayList<Integer>();
 		
 		try {
 			File file = new File(filepath);
@@ -20,15 +21,21 @@ public class MyFileUtilities {
 			while ((st = br.readLine()) != null) {
 			
 				int input = Integer.parseInt(st);
-				array[i] = input;
+				arraylist.add(input);
 				i++;
 			}
-			
+
 			br.close();
 		} catch (Exception e) {
 			throw new IllegalArgumentException("Error while reading the file");
 	    } 
 		
+		int size = arraylist.size();
+		int[] array = new int[size];
+		
+		for (int i = 0 ; i < size; i++) {
+			array[i] = arraylist.get(i);
+		}
 		return array;
 	}
 
