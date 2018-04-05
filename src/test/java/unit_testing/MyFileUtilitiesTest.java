@@ -33,11 +33,18 @@ public class MyFileUtilitiesTest {
 	    Assert.assertArrayEquals(array ,mf.readFile(path));
 	}
 	
+	@Test
+	public void testFileReader_EmptyFile() {
+		
+		String path = "src\\test\\resources\\grades_empty.txt";
+		mf.readFile(path);
+	}
+	
 	@Rule
 	public ExpectedException thrown = ExpectedException.none(); 
 	
-	@Test(expected=IllegalArgumentException.class)
-	public void testFileReader_NoPathInput() {
+	@Test
+	public void testFileReader_InvalidInput() {
 		thrown.expect(IllegalArgumentException.class);
 		
 		String path = "src\\test\\resources";

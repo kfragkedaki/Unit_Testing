@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.lang.Exception;
-import java.io.FileNotFoundException;
 
 public class MyFileUtilities {
 	
@@ -28,7 +27,7 @@ public class MyFileUtilities {
 			br.close();
 		} catch (Exception e) {
 			throw new IllegalArgumentException("Error while reading the file");
-	    }
+	    } 
 		
 		return array;
 	}
